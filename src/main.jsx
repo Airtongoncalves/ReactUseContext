@@ -9,6 +9,8 @@ import Home from './routes/Home';
 
 import Contact from './routes/Contact';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -22,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router}/>
+    </ThemeProvider>
   </React.StrictMode>
 );
